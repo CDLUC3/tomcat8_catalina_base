@@ -1,0 +1,6 @@
+#! /bin/sh
+
+CATALINA_HOME=/cdlcommon/products/apache-tomcat
+CATALINA_BASE=/apps/dpr2/apps/PLACE_HOLDER_FOR_SERVICE_NAME/tomcat
+export CATALINA_HOME CATALINA_BASE
+$CATALINA_HOME/bin/shutdown.sh
