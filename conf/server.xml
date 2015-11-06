@@ -126,8 +126,9 @@
       <!-- Define the default virtual host
            Note: XML Schema validation will not work with Xerces 2.2.
        -->
+      <!-- <Host name="localhost"  -->
       <Host name="localhost" appBase="webapps"
-            unpackWARs="true" autoDeploy="true">
+            unpackWARs="true" autoDeploy="false" deployOnStartup="false">
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
@@ -142,13 +143,8 @@
 	       pattern='%h %l %u %t "%r" %s %b %{Referer}i %{User-Agent}i'/>
 
 	<!-- Better to define context in context.xml -->
-	<Context path="/" docBase="ingest.war"> 
-	   <Resources>
-	      xmlValidation="false"
-	      xmlNamespaceAware="false"
-	   </Resources>
-	</Context>
-	<Context path="/ingestqueue" docBase="webapps/ingestqueue">
+	<Context path="" docBase="ingest.war" tldValidation="false"/> 
+	<Context path="/ingestqueue" docBase="ingestqueue">
 	   <Resources>
 	      allowLinking="true"
 	   </Resources>
