@@ -120,8 +120,8 @@
                resourceName="UserDatabase"/>
       </Realm>
 
-      <Host name="localhost"  appBase=""
-            unpackWARs="true" autoDeploy="true">
+      <Host name="localhost"  appBase="webapps"
+            unpackWARs="true" autoDeploy="false" deployOnStartup="true">
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
@@ -129,7 +129,9 @@
         <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
         -->
 
-        <Context path="" docBase="webapps" tldValidation="false" unpackWAR="true"/>
+<!--
+        <Context path="/knb" docBase="knb.war" tldValidation="false" />
+-->
 
         <!-- Access log processes all example.
              Documentation at: /docs/config/valve.html
