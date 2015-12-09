@@ -19,7 +19,7 @@
      define subcomponents such as "Valves" at this level.
      Documentation at /docs/config/server.html
  -->
-<Server port="33125" shutdown="SHUTDOWN">
+<Server port="33139" shutdown="SHUTDOWN">
   <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
@@ -66,7 +66,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL HTTP/1.1 Connector on port 8080
     -->
-    <Connector port="33121" protocol="HTTP/1.1" 
+    <Connector port="33140" protocol="HTTP/1.1" 
                connectionTimeout="20000" 
                redirectPort="8443" URIEncoding="UTF-8" enableLookups="true"/>
     <!-- A "Connector" using the shared thread pool-->
@@ -87,7 +87,7 @@
     -->
 
     <!-- Define an AJP 1.3 Connector on port 8009 -->
-    <Connector port="33129" protocol="AJP/1.3" redirectPort="8443" />
+    <!-- <Connector port="33129" protocol="AJP/1.3" redirectPort="8443" /> -->
 
     <!-- An Engine represents the entry point (within Catalina) that processes
          every request.  The Engine implementation for Tomcat stand alone
@@ -128,7 +128,7 @@
        -->
       <!-- <Host name="localhost"  -->
       <Host name="localhost" appBase="webapps"
-            unpackWARs="true" autoDeploy="false" deployOnStartup="false">
+            unpackWARs="false" autoDeploy="false" deployOnStartup="false">
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
@@ -143,12 +143,7 @@
 	       pattern='%h %l %u %t "%r" %s %b %{Referer}i %{User-Agent}i'/>
 
 	<!-- Better to define context in context.xml -->
-	<Context path="" docBase="ingest.war" tldValidation="false"/> 
-	<Context path="/ingestqueue" docBase="ingestqueue">
-	   <Resources>
-	      allowLinking="true"
-	   </Resources>
-	</Context>
+        <Context path="" docBase="feeder-mets.war"/>
       </Host>
     </Engine>
   </Service>
