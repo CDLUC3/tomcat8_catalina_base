@@ -128,7 +128,7 @@
        -->
       <!-- <Host name="localhost"  -->
       <Host name="localhost" appBase="webapps"
-            unpackWARs="false" autoDeploy="false" deployOnStartup="false">
+            unpackWARs="true" autoDeploy="false" deployOnStartup="false">
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
@@ -142,8 +142,11 @@
                prefix="access_log." fileDateFormat="yyyy-MM-dd.HH" suffix=".log" 
 	       pattern='%h %l %u %t "%r" %s %b %{Referer}i %{User-Agent}i'/>
 
-	<!-- Better to define context in context.xml -->
-        <Context path="" docBase="feeder-mets.war"/>
+
+        <!-- Better to define context in context.xml -->
+        <Context path="/feeder-mets" docBase="feeder-mets.war"/> 
+        <!-- <Context path="" docBase=""/>  -->
+        <Context path="/feederout" docBase="feederout"/>
       </Host>
     </Engine>
   </Service>
