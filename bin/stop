@@ -1,5 +1,5 @@
 #! /bin/bash
 CATALINA_HOME=/dpr2/tomcat
-CATALINA_BASE=/apps/dpr2/apps/inv36121/tomcat
+CATALINA_BASE=/apps/dpr2/apps/replic38001/tomcat
 export CATALINA_HOME CATALINA_BASE
 $CATALINA_HOME/bin/shutdown.sh
