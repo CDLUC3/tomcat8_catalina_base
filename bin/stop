@@ -2,4 +2,4 @@
 CATALINA_HOME=/dpr2store/tomcat
 CATALINA_BASE=/dpr2store/apps/storage35121/tomcat
 export CATALINA_HOME CATALINA_BASE
-$CATALINA_HOME/bin/shutdown.sh
+$CATALINA_HOME/bin/catalina.sh stop 90 -force
