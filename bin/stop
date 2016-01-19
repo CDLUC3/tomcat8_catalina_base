@@ -2,4 +2,4 @@
 CATALINA_HOME=/dataone/tomcat
 CATALINA_BASE=/dataone/apps/metacat33181/tomcat
 export CATALINA_HOME CATALINA_BASE
-$CATALINA_HOME/bin/shutdown.sh
+$CATALINA_HOME/bin/catalina.sh stop 60 -force
