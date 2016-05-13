@@ -5,5 +5,5 @@ JRE_HOME=/usr/lib/jvm/java
 CATALINA_HOME=/dpr2/tomcat
 CATALINA_BASE=/apps/dpr2/apps/sword39001/tomcat
 CATALINA_OPTS="-Xmx2048m -Xms2024m -Dfile.encoding=UTF8 -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true -XX:+UseG1GC -d64"
-CATALINA_PID=/dpr2/apps/sword39001/oai.pid
+CATALINA_PID=/dpr2/apps/sword39001/sword.pid
 export JAVA_HOME CATALINA_HOME CATALINA_BASE CATALINA_OPTS CATALINA_PID
