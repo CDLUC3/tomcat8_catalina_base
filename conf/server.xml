@@ -140,7 +140,7 @@
              Documentation at: /docs/config/valve.html -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="${catalina.base}/logs/access"
                prefix="access_log." fileDateFormat="yyyy-MM-dd.HH" suffix=".log" 
-	       pattern='%h %l %u %t "%r" %s %b %{Referer}i %{User-Agent}i'/>
+               pattern='%h %l %u %t "%r" %s %b %{Referer}i %{User-Agent}i %{hostname}o %{BID}o %{JID}o' />
 
 	<!-- Better to define context in context.xml -->
 	<Context path="" docBase="ingest.war" tldValidation="false"/> 
