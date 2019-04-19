@@ -144,10 +144,7 @@
 
 	<!-- Better to define context in context.xml -->
 	<Context path="" docBase="ingest.war" tldValidation="false"/> 
-	<Context path="/ingestqueue" docBase="ingestqueue">
-	   <Resources>
-	      allowLinking="true"
-	   </Resources>
+	<Context  allowLinking="true" path="/ingestqueue" docBase="ingestqueue">
 	</Context>
       </Host>
     </Engine>
