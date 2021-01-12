@@ -9,3 +9,8 @@ CATALINA_OPTS="-Xmx6144m -Xms4096m -XX:+UseG1GC -Dfile.encoding=UTF8 -Dorg.apach
 CATALINA_PID=${CATALINA_ROOT}/ingest.pid
 # CLASSPATH=${CATALINA_HOME}/bin/tomcat-juli.jar
 export JAVA_HOME JRE_HOME CATALINA_HOME CATALINA_BASE CATALINA_OPTS CATALINA_PID CLASSPATH
+# Support SSM
+export MERRITT_INGEST=ingest
+export SSM_ROOT_PATH=/uc3/mrt/prd
+export HOSTNAME=uc3-ingest02x2-prd
+export WORKERNAME=ingest02
