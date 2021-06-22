@@ -14,3 +14,4 @@ export MERRITT_INGEST=ingest
 export SSM_ROOT_PATH=/uc3/mrt/prd
 export HOSTNAME=uc3-ingest03x2-prd
 export WORKERNAME=ingest03
+export UMASK=0022
