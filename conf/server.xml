@@ -120,8 +120,8 @@
                resourceName="UserDatabase"/>
       </Realm>
 
-      <Host name="localhost"  appBase=""
-            unpackWARs="true" autoDeploy="true">
+     <Host name="localhost"  appBase="webapps"
+            unpackWARs="true" autoDeploy="false" deployOnStartup="false">
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
@@ -135,8 +135,8 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
                prefix="localhost_access_log" suffix=".txt"
                pattern="%h %l %u %t &quot;%r&quot; %s %b %{hostname}i %{JID}i" />
-        <Context path="" docBase="webapps/storage.war"/>
-        <Context path="/container" docBase="webapps/container"/>
+        <Context path="" docBase="storage.war"/>
+        <Context path="/container" docBase="container"/>
       </Host>
     </Engine>
   </Service>
