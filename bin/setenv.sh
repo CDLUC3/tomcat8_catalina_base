@@ -12,6 +12,6 @@ export JAVA_HOME JRE_HOME CATALINA_HOME CATALINA_BASE CATALINA_OPTS CATALINA_PID
 # Support SSM
 export MERRITT_INGEST=ingest
 export SSM_ROOT_PATH=/uc3/mrt/prd
-export HOSTNAME=uc3-ingest01x2-prd
-export WORKERNAME=ingest01
+export HOSTNAME=localhost
+export WORKERNAME=localhost
 export UMASK=0022
