@@ -12,6 +12,9 @@ export JAVA_HOME JRE_HOME CATALINA_HOME CATALINA_BASE CATALINA_OPTS CATALINA_PID
 # Support SSM
 export MERRITT_INGEST=ingest
 export SSM_ROOT_PATH=/uc3/mrt/prd
-export HOSTNAME=localhost
-export WORKERNAME=localhost
+export HOSTNAME=$(hostname)
+# Zookeeper Ingest Queues defined in SSM (/uc3/mrt/prd/ingest/zoo/IngestQNames)
+if [ ${HOSTNAME} == "uc3-ingest01x2-prd" ]; then export WORKERNAME="ingest01"; fi
+if [ ${HOSTNAME} == "uc3-ingest02x2-prd" ]; then export WORKERNAME="ingest02"; fi
+if [ ${HOSTNAME} == "uc3-ingest03x2-prd" ]; then export WORKERNAME="ingest03"; fi
 export UMASK=0022
