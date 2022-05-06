@@ -1,5 +1,3 @@
-# JAVA_HOME=/cdlcommon/products/java7
-# needed for G1 collector
 JAVA_HOME=/usr/lib/jvm/java
 JRE_HOME=/usr/lib/jvm/java
 CATALINA_HOME=/dpr2/tomcat
